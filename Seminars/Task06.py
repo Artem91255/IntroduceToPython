@@ -3,7 +3,7 @@
 
 number = int(input('Введите цифру, обозначающую день недели: '))
 if number>0 and number<6:
-    print('не')
+    print('нет')
 elif number==6 or number==7:
     print('да')
 else:
