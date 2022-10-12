@@ -3,8 +3,8 @@
 
 number = int(input('Введите цифру, обозначающую день недели: '))
 if number>0 and number<6:
-    print('Это будний день')
+    print('не')
 elif number==6 or number==7:
-    print('Это выходной день')
+    print('да')
 else:
     print('Неправильный ввод')
