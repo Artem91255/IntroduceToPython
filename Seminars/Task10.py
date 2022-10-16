@@ -18,3 +18,7 @@ y2 = int(input('Введите y: '))
 
 d = round(math.sqrt(((x2-x1)**2) + ((y2-y1)**2)),2)
 print(d)
+
+#Второй вариант формулы
+
+print(int(math.sqrt(((y2-y1)**2) +((x1-x2)**2))*100)/100)
