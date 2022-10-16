@@ -19,7 +19,7 @@ print(elements)
 
 mult = 1
 
-f2 = open('C:\\Users\\Admin\\Desktop\\GeekBrains\\IntroduceToPython\\Seminars\\file.txt', 'rt')
+f2 = open('C:\\Users\\Admin\\Desktop\\GeekBrains\\IntroduceToPython\\Seminars\\file.txt', 'r')
 l = [line.strip() for line in f2]
 f2.close
 
