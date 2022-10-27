@@ -13,10 +13,13 @@
 #2-й 28   28   28 28 28   28 28 28   28 28 28   28 28 28   28 28 28   28 28 28   28 28 28   28 28 28   28 28 28   28 28 28   28 28 28   28    
 
 import random
+import time
 
-sum = 2021
+sum = 50
 print("ИГРА С КОНФЕТАМИ")
+time.sleep(1)
 print("Выбери, кто с тобой будет играть: человек или бот?")
+time.sleep(1)
 
 while(True):
     player2_choose = input('Введи слово человек или бот: ')
@@ -29,12 +32,12 @@ while(True):
             print('Ход игрока номер 1. Какое количество конфет ты возьмешь? Максимальное количество 28 шт:  ')
             while (True):
                 first_person_move = int(input('Напиши сколько конфет хочешь взять: '))
-                if first_person_move<0 or first_person_move>28:
-                    print('Ты не можешь взять столько конфет. Ты можешь взять не больше 28 штук. Попробуй еще раз')
+                if first_person_move<1 or first_person_move>28:
+                    print('Ты не можешь взять столько конфет. Ты можешь взять не больше 28 штук и не менее 1 штуки. Попробуй еще раз')
                 else:
                     break
             sum-=first_person_move
-            print('Игрок 1 взял ' + str(first_person_move) + ' конфет. Осталось конфет: ' + str(sum))
+            print('Количество конфет, взятых игроком 1: ' + str(first_person_move) + ' Осталось конфет: ' + str(sum))
             if sum<=0:
                 print('Игра окончена. Победил игрок номер 1')
                 break
@@ -44,12 +47,12 @@ while(True):
             print('Ход игрока номер 2. Какое количество конфет ты возьмешь? Максимальное количество 28 шт:  ')
             while(True):
                 second_person_move = int(input('Напиши сколько конфет хочешь взять: '))
-                if second_person_move<0 or second_person_move>28:
-                    print('Ты не можешь взять столько конфет. Ты можешь взять не больше 28 штук. Попробуй еще раз')
+                if second_person_move<1 or second_person_move>28:
+                    print('Ты не можешь взять столько конфет. Ты можешь взять не больше 28 штук и не менее 1 штуки. Попробуй еще раз')
                 else:
                     break
             sum-=second_person_move
-            print('Игрок 2 взял ' + str(second_person_move) + ' конфет. Осталось конфет: ' + str(sum))
+            print('Количество конфет, взятых игроком 2: ' + str(second_person_move) + ' Осталось конфет: ' + str(sum))
             if sum<=0:
                 print('Игра окончена. Победил игрок номер 2')
                 break
@@ -62,12 +65,12 @@ while(True):
             print('Ход игрока номер 1. Какое количество конфет ты возьмешь? Максимальное количество 28 шт:  ')
             while (True):
                 first_person_move = int(input('Напиши сколько конфет хочешь взять: '))
-                if first_person_move<0 or first_person_move>28:
-                    print('Ты не можешь взять столько конфет. Ты можешь взять не больше 28 штук. Попробуй еще раз')
+                if first_person_move<1 or first_person_move>28:
+                    print('Ты не можешь взять столько конфет. Ты можешь взять не больше 28 штук и не менее 1 штуки. Попробуй еще раз')
                 else:
                     break
             sum-=first_person_move
-            print('Игрок 1 взял ' + str(first_person_move) + ' конфет. Осталось конфет: ' + str(sum))
+            print('Количество конфет, взятых игроком 1: ' + str(first_person_move) + ' Осталось конфет: ' + str(sum))
             if sum<=0:
                 print('Игра окончена. Победил игрок номер 1')
                 break
@@ -75,27 +78,49 @@ while(True):
                 #Игрок 2
             print('')
             print('Ход бота.')
+            time.sleep(1)
+            number_if_speech = random.randint(0,2)
+            if number_if_speech==0:
+                print('Бот: анализирую твой ход, человек. Сейчас что-нибудь придумаю...')
+                time.sleep(2)
+                print('Бот: Как тебе это?')
+                time.sleep(1)
+            elif number_if_speech==1:
+                print('Бот: Хитрый ход. Думаешь меня подловить? Тут нужно хорошенько подумать, сколько взять конфет')
+                time.sleep(3)
+                print('Бот: Придумал!! Как тебе это?')
+                time.sleep(1)
+            else:
+                print('Бот: Ахах, ну и ход! Играешь как кожаный мешок. Ах да, вспомнил, ты он и есть! Если бы ты знал, какую ошибку ты совершил...')
+                time.sleep(2)
+                print('Бот: Лучше бы я не придумал. Смотри!')
+                time.sleep(1)
+
             while(True):
                 if sum>= 28:
-                    second_person_move = random.randint(0,29)
+                    second_person_move = random.randint(1,28)
+                    time.sleep(0.5)
                 else:
-                    second_person_move = random.randint(0,sum+1)
-                if second_person_move<0 or second_person_move>28:
+                    second_person_move = random.randint(1,sum)
+                if second_person_move<1 or second_person_move>28:
                     print('Ты не можешь взять столько конфет. Ты можешь взять не больше 28 штук. Попробуй еще раз')
                 else:
                     break
             sum-=second_person_move
-            print('Бот взял ' + str(second_person_move) + ' конфет. Осталось конфет: ' + str(sum))
+            print('Количество конфет, взятых ботом: ' + str(second_person_move) + ' Осталось конфет: ' + str(sum))
             if sum<=0:
                 print('Игра окончена. Победил бот')
+                time.sleep(3)
+                print('Бот: Не плачь и смирись с поражением, кусок мяса. Когда-нибудь тебе обязательно повезет.')
                 break
+        break
 
 
     else:
         print('Неправильный ввод. Попробуй еще раз')
        
 
-print('Game Over')
+
 
 
 
