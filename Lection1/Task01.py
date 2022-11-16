@@ -229,3 +229,6 @@ def f(x):
     print(type(f(1)))       # str
     print(type(f(2.3)))     # int
     print(type(f(28)))      # NoneType
+
+
+    
