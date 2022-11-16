@@ -5,31 +5,8 @@
 # как привести их к корректному виду. Можно ли при этом не создавать новый список?
 
 
-# list = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАй', 'директор аэлита']
-# new_list=[]
-# for i in range(0,len(list)):
-#     list2 = list[i].split(" ")
-#     new_list.append(list2[len(list2)-1])
-#
-# print(new_list)
-#
-# for i in range(0, len(new_list)):
-#     new_list[i] = new_list[i].capitalize()
-#
-# print(new_list)
-# for i in range(0, len(new_list)):
-#     print("Привет "+ new_list[i] + "!")
-
-
-
-
-
-
-
-
 test_list = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАй', 'директор аэлита']
-print(test_list)
-print()
+
 # удаляем лишние слова
 def del_words(test_string):
     for i in range(len(test_string), 0, -1):
